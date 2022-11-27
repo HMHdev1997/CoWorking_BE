@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoWorking.Data.Access.Data.Migrations.MsSql
 {
     [DbContext(typeof(SqlServerDbContext))]
-    [Migration("20221124035934_InitialDbMssqlv0.2")]
-    partial class InitialDbMssqlv02
+    [Migration("20221127095808_InitialDbMssql")]
+    partial class InitialDbMssql
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

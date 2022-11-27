@@ -17,7 +17,7 @@ namespace CoWorking.Data.Model
         [Required]
         [MaxLength(256)]
         public string Fullname { set; get; }
-
+        [Column(TypeName = "xml")]
         public string Image { set; get; }
         public int IdentifierCode { set; get; }
         [MaxLength(256)]
@@ -28,6 +28,7 @@ namespace CoWorking.Data.Model
         [MaxLength(5)]
         public string Gender { set; get; }
         public int Age { set; get; }
+        [DataType(DataType.Date)]
         public DateTime? DateOfBirth { set; get; }
         public DateTime? RegistrationDate { set; get; }
         public int Status { set; get; }

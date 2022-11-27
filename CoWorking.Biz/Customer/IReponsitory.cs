@@ -9,5 +9,6 @@ namespace CoWorking.Biz.Customer
     {
         Task<Model.Customer.View> CreateAync(Model.Customer.New model);
         Task<Model.Customer.View> UpdateAync(Model.Customer.Edit model);
+
     }
 }

@@ -22,9 +22,12 @@ namespace CoWorking.Biz.Customer
             _configuration = configuration;
         }
 
-        public Task<View> CreateAync(New model)
+        public async Task<View> CreateAync(New model)
         {
-            throw new NotImplementedException();
+            var Item = _mapper.Map<New,Data.Model.Customer >(model);
+            await _context.Customers.AddAsync(Item);
+            await  _context.SaveChangesAsync();
+            return _mapper.Map<Data.Model.Customer, View>(Item);
         }
 
         public Task<View> UpdateAync(Edit model)

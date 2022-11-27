@@ -15,7 +15,11 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                         .Annotation("SqlServer:Identity", "1, 1"),
                     City = table.Column<string>(maxLength: 256, nullable: false),
                     District = table.Column<string>(maxLength: 256, nullable: false),
-                    Street = table.Column<string>(maxLength: 256, nullable: false)
+                    Street = table.Column<string>(maxLength: 256, nullable: false),
+                    CreateDate = table.Column<DateTime>(nullable: true),
+                    CreateBy = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: true),
+                    ModifiedBy = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -29,7 +33,11 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 256, nullable: true),
-                    Decription = table.Column<string>(maxLength: 256, nullable: true)
+                    Decription = table.Column<string>(maxLength: 256, nullable: true),
+                    CreateDate = table.Column<DateTime>(nullable: true),
+                    CreateBy = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: true),
+                    ModifiedBy = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,7 +52,11 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Type = table.Column<string>(maxLength: 50, nullable: false),
-                    Capacity = table.Column<int>(nullable: false)
+                    Capacity = table.Column<int>(nullable: false),
+                    CreateDate = table.Column<DateTime>(nullable: true),
+                    CreateBy = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: true),
+                    ModifiedBy = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -110,6 +122,10 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                     Discount = table.Column<decimal>(nullable: false),
                     Latitude = table.Column<long>(nullable: false),
                     Longitude = table.Column<long>(nullable: false),
+                    CreateDate = table.Column<DateTime>(nullable: true),
+                    CreateBy = table.Column<string>(nullable: true),
+                    ModifiedDate = table.Column<DateTime>(nullable: true),
+                    ModifiedBy = table.Column<string>(nullable: true),
                     CategoryOfficeID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

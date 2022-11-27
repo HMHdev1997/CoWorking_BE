@@ -55,13 +55,12 @@ namespace CoWorking.Biz.Office
 
         public async Task<List<List>> GetSearch(string search)
         {
-            var searchOffice =  _context.Offices.AsQueryable();
+            var searchOffice = await _context.Offices.AsQueryable().ToListAsync();
             if (!string.IsNullOrEmpty(search))
             {
                 searchOffice.Where(x => x.NameOffice.Contains(search));
             }
-            
-            return  _mapper.Map<List<Data.Model.Office>, List<List>>(searchOffice.ToList());
+            return  _mapper.Map<List<Data.Model.Office>, List<List>>(searchOffice);
         }
 
         public async Task<View> UpdateAync(Edit model)

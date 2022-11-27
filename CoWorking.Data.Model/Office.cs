@@ -18,7 +18,9 @@ namespace CoWorking.Data.Model
         [MaxLength(256)]
         public string NameOffice { set; get; }
         [MaxLength(256)]
-        public string Address { set; get; }       
+        public string Address { set; get; }
+
+        [Column(TypeName ="xml")]
         public string Image { set; get; }
         [MaxLength(500)]
         public string GenenalDecription { set; get; }       

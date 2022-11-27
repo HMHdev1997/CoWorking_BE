@@ -16,6 +16,7 @@ namespace CoWorking.Biz.Model.Customer
         public string Email { set; get; }      
         public string Gender { set; get; }
         public int Age { set; get; }
+
         public DateTime? DateOfBirth { set; get; }
         public DateTime? RegistrationDate { set; get; }
         public int Status { set; get; }

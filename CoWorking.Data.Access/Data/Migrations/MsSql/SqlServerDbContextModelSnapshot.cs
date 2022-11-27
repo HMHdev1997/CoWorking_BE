@@ -253,7 +253,7 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                         .HasColumnType("int");
 
                     b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("xml");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -399,7 +399,7 @@ namespace CoWorking.Data.Access.Data.Migrations.MsSql
                         .HasColumnType("bit");
 
                     b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("xml");
 
                     b.Property<long>("Latitude")
                         .HasColumnType("bigint");
